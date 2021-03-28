@@ -34,7 +34,6 @@ void desenho_perdeu();
 void desenho_feliz();
 void logo_forca();
 
-
 int main(){
 	desenho_quadro();
 	desenho_forca();
