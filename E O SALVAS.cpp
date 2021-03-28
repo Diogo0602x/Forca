@@ -34,16 +34,15 @@ void desenho_perdeu();
 void desenho_feliz();
 void logo_forca();
 
-
 int main(){
 	desenho_quadro();
 	desenho_forca();
 	bem_vindo();
 	logo_forca();
 	getchar();
-	int opcao_menu;			//Menu de opções
+	int opcao_menu;			//Menu de opÃ§Ãµes
 		do{
-			opcao_menu = menu();		//Função menu
+			opcao_menu = menu();		//FunÃ§Ã£o menu
 			switch(opcao_menu){
 				case 0:
 					clrscr();
@@ -51,7 +50,7 @@ int main(){
 					desenho_quadro();
 					desenho_forca();
 					logo_forca();
-					gotoxy(7,3);textcolor(7);printf("Saindo... \n");		//Mensagem ao escolher a opção para fechar o console
+					gotoxy(7,3);textcolor(7);printf("Saindo... \n");		//Mensagem ao escolher a opÃ§Ã£o para fechar o console
 					gotoxy(6,26);
 					break;
 				case 1:
@@ -59,12 +58,12 @@ int main(){
 						clrscr();
 						getchar();
 						desenho_quadro();
-						banco_palavras();		//Função para escolher a palavra secreta
+						banco_palavras();		//FunÃ§Ã£o para escolher a palavra secreta
 						resetar_variaveis();	//Gambiarra para resetar os dados das variaveis
 						do{
-							jogo_forca();		//Chamada de funções necessárias para o jogo
+							jogo_forca();		//Chamada de funÃ§Ãµes necessÃ¡rias para o jogo
 							
-							chutes();			//Chamada de funções necessárias para controlar os chutes
+							chutes();			//Chamada de funÃ§Ãµes necessÃ¡rias para controlar os chutes
 						}while(!acertou() && !enforcou());		//Booleanos para controle da partida	
 						
 						if(acertou()){	
@@ -215,7 +214,7 @@ void jogo_forca(){
 	
 	int erros = chutes_errados();
 
-	//FORCA LINHA HORIZONTAL MAIOR(CHÃO)
+	//FORCA LINHA HORIZONTAL MAIOR(CHÃƒO)
 	for(int i =47; i<61; i++){		
 		gotoxy(i,15);textcolor(7);printf("%c",196);
 	}
@@ -269,7 +268,7 @@ void jogo_forca(){
 		printf("\n");
 }
 
-int letras_chutadas(char letra){		//desenha forca // Letras Já chutou
+int letras_chutadas(char letra){		//desenha forca // Letras JÃ¡ chutou
 	int achou = 0;
 			
 	for(int i = 0; i < forca.contador_chutes; i++) {
@@ -344,7 +343,7 @@ void bem_vindo(){
 
 void desenho_forca(){
 	
-	//FORCA LINHA HORIZONTAL MAIOR(CHÃO)
+	//FORCA LINHA HORIZONTAL MAIOR(CHÃƒO)
 	for(int i =47; i<61; i++){		
 		gotoxy(i,15);textcolor(7);printf("%c",196);
 	}
@@ -392,7 +391,7 @@ void desenho_perdeu(){
 
 void desenho_feliz(){
 	
-	//FORCA LINHA HORIZONTAL MAIOR(CHÃO)
+	//FORCA LINHA HORIZONTAL MAIOR(CHÃƒO)
 	for(int i =47; i<61; i++){		
 		gotoxy(i,15);textcolor(7);printf("%c",196);
 	}
