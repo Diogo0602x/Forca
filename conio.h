@@ -153,7 +153,6 @@ void textcolor(int newcolor) {
       (csbi.wAttributes & 0xf0) | newcolor);
    vActual2.attribute = (csbi.wAttributes & 0xf0) | newcolor;
 }
-
 #ifdef __cplusplus
 }
 #endif
